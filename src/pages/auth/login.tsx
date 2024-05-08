@@ -23,6 +23,15 @@ const Login: React.FC = () => {
         }
     };
 
+    const toggleShowOrHidePassword = () => {
+        const passwordInput = document.getElementById('password') as HTMLInputElement;
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    }
+
     return (
         <>
             <div className="page page-center">
@@ -54,13 +63,14 @@ const Login: React.FC = () => {
                                     </label>
                                     <div className="input-group input-group-flat">
                                         <input
-                                            type="password"
+                                            type="password" id='password'
                                             className="form-control"
                                             placeholder="Your password"
                                             autoComplete="off"
                                         />
                                         <span className="input-group-text">
                                             <a
+                                                onClick={toggleShowOrHidePassword}
                                                 href="#"
                                                 className="link-secondary"
                                                 title="Show password"
@@ -102,9 +112,9 @@ const Login: React.FC = () => {
                                 </div>
                             </form>
                         </div>
-                     
+
                     </div>
-                  
+
                 </div>
             </div>
         </>
