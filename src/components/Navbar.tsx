@@ -276,16 +276,9 @@ const Navbar = () => {
                                 </div>
                             </a>
                             <div className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                                <a href="#" className="dropdown-item">
-                                    Status
-                                </a>
                                 <a href="./profile.html" className="dropdown-item">
                                     Profile
                                 </a>
-                                <a href="#" className="dropdown-item">
-                                    Feedback
-                                </a>
-                                <div className="dropdown-divider" />
                                 <a href="./settings.html" className="dropdown-item">
                                     Settings
                                 </a>

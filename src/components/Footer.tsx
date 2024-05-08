@@ -11,7 +11,6 @@ const Footer = () => {
                             <a href="./." className="link-secondary">
                                 HRSphere
                             </a>
-
                             . All rights reserved.
                         </li>
                     </ul>
