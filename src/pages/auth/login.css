@@ -1,0 +1,8 @@
+.page-center {
+    height: 100vh; /* Adjust as needed */
+}
+
+.container-tight {
+    max-width: 450px; /* Adjust as needed */
+    width: 100%;
+}

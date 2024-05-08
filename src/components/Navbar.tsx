@@ -122,8 +122,8 @@ const Navbar = () => {
                                                             Example 1
                                                         </a>
                                                         <div className="d-block text-muted text-truncate mt-n1">
-                                                            Change deprecated html tags to text decoration classes
-                                                            (#29604)
+                                                            Change deprecated html tags to text decoration
+                                                            classes (#29604)
                                                         </div>
                                                     </div>
                                                     <div className="col-auto">
@@ -141,7 +141,11 @@ const Navbar = () => {
                                                                 strokeLinecap="round"
                                                                 strokeLinejoin="round"
                                                             >
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M0 0h24v24H0z"
+                                                                    fill="none"
+                                                                />
                                                                 <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
                                                             </svg>
                                                         </a>
@@ -163,7 +167,10 @@ const Navbar = () => {
                                                         </div>
                                                     </div>
                                                     <div className="col-auto">
-                                                        <a href="#" className="list-group-item-actions show">
+                                                        <a
+                                                            href="#"
+                                                            className="list-group-item-actions show"
+                                                        >
                                                             {/* Download SVG icon from http://tabler-icons.io/i/star */}
                                                             <svg
                                                                 xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +184,11 @@ const Navbar = () => {
                                                                 strokeLinecap="round"
                                                                 strokeLinejoin="round"
                                                             >
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M0 0h24v24H0z"
+                                                                    fill="none"
+                                                                />
                                                                 <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
                                                             </svg>
                                                         </a>
@@ -212,7 +223,11 @@ const Navbar = () => {
                                                                 strokeLinecap="round"
                                                                 strokeLinejoin="round"
                                                             >
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M0 0h24v24H0z"
+                                                                    fill="none"
+                                                                />
                                                                 <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
                                                             </svg>
                                                         </a>
@@ -247,7 +262,11 @@ const Navbar = () => {
                                                                 strokeLinecap="round"
                                                                 strokeLinejoin="round"
                                                             >
-                                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                                <path
+                                                                    stroke="none"
+                                                                    d="M0 0h24v24H0z"
+                                                                    fill="none"
+                                                                />
                                                                 <path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
                                                             </svg>
                                                         </a>
@@ -268,11 +287,15 @@ const Navbar = () => {
                             >
                                 <span
                                     className="avatar avatar-sm"
-                                    style={{ backgroundImage: "url(./assets/static/avatars/000m.jpg)" }}
+                                    style={{
+                                        backgroundImage: "url(./assets/static/avatars/000m.jpg)",
+                                    }}
                                 />
                                 <div className="d-none d-xl-block ps-2">
                                     <div>Tharindu Wijayarathna</div>
-                                    <div className="mt-1 small text-muted">Senior Software Engineer</div>
+                                    <div className="mt-1 small text-muted">
+                                        Senior Software Engineer
+                                    </div>
                                 </div>
                             </a>
                             <div className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
@@ -320,7 +343,6 @@ const Navbar = () => {
                                         <span className="nav-link-title">Home</span>
                                     </a>
                                 </li>
-
 
                                 <li className="nav-item dropdown">
                                     <a
@@ -373,7 +395,6 @@ const Navbar = () => {
                 </div>
             </header>
         </>
-
     );
 };
 
