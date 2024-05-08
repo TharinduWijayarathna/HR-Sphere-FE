@@ -24,7 +24,6 @@ const Login: React.FC = () => {
     };
 
     return (
-
         <>
             <div className="page page-center">
                 <div className="container container-tight py-4">
