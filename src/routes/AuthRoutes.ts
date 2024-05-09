@@ -1,4 +1,4 @@
-const baseURL = process.env.REACT_APP_BASE_URL + 'auth/user';
+const baseURL = process.env.REACT_APP_BASE_URL + 'user';
 
 const AuthRoutes = ($api: any) => ({
     login: (data: any) => $api.post(`${baseURL}/login`, data),

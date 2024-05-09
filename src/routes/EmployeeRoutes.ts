@@ -1,5 +1,5 @@
 //get base url from .env file
-const baseURL = process.env.REACT_APP_BASE_URL + 'api/employee';
+const baseURL = process.env.REACT_APP_BASE_URL + 'employee';
 
 const CustomerRoutes = ($api: any) => ({
     index: (filters: any) => $api.get(`${baseURL}`, { params: filters }),
