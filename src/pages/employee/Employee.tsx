@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CustomerRoutes from "../../routes/EmployeeRoutes";
-import Footer from "../../components/Footer";
-import Navbar from "../../components/Navbar";
 import AppLayout from "../../layouts/AppLayout";
 
 interface CustomerData {
