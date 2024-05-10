@@ -1,15 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import EmployeeIndex from './pages/employee';
 import Login from './pages/auth/login';
+import Home from './pages/home/Home';
+import Employee from './pages/employee/Employee';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/employee' element={<EmployeeIndex />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/employee' element={<Employee />} />
         </Routes>
       </BrowserRouter>
     </div>

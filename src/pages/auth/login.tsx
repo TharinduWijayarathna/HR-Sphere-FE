@@ -70,7 +70,7 @@ const Login: React.FC = () => {
                                         <a
                                             onClick={toggleShowOrHidePassword}
                                             href="#"
-                                            className="link-secondary"
+                                            className="link-secondary ps-2 pe-0"
                                             title="Show password"
                                             data-bs-toggle="tooltip"
                                         >
