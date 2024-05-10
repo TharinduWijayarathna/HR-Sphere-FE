@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import CustomerRoutes from '../../routes/EmployeeRoutes';
-import Footer from '../../components/Footer';
-import Navbar from '../../components/Navbar';
-import AppLayout from '../../layouts/AppLayout';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import CustomerRoutes from "../../routes/EmployeeRoutes";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
+import AppLayout from "../../layouts/AppLayout";
 
 interface CustomerData {
   name: string;
@@ -24,13 +24,16 @@ const Employee: React.FC = () => {
         const response = await CustomerRoutes(api).list();
         setCustomerData(response.data.data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
   }, [api]);
 
+  // useEffect(() => {
+  //   localStorage.setItem("token", "1234");
+  // }, []);
 
   return (
     <>
@@ -46,7 +49,8 @@ const Employee: React.FC = () => {
             </div>
             <p className="empty-title">No results found</p>
             <p className="empty-subtitle text-muted">
-              Try adjusting your search or filter to find what you're looking for.
+              Try adjusting your search or filter to find what you're looking
+              for.
             </p>
             <div className="empty-action">
               <a href="./." className="btn btn-primary">
@@ -72,7 +76,6 @@ const Employee: React.FC = () => {
             </div>
           </div>
         </div>
-
       </AppLayout>
     </>
   );
