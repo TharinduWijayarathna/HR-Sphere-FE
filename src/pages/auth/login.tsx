@@ -1,20 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 import AuthRoutes from '../../routes/AuthRoutes';
 import './login.css';
+import { getAppURL } from '../../utils/helpers';
 
 const Login: React.FC = () => {
-    const api = axios.create({
-        baseURL: process.env.REACT_APP_BASE_URL,
-    });
+
+    const api = axios.create();
 
     const handleLogin = async () => {
         const email = (document.getElementById('email') as HTMLInputElement).value;
         const password = (document.getElementById('password') as HTMLInputElement).value;
+        const subdomain = getAppURL();
 
         try {
-            const response = await AuthRoutes(api).login({ email, password });
-            console.log(response);
+            const response = await AuthRoutes(api).login({ email, password, subdomain });   
+
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('tenant', response.data.tenant);
+
+            window.location.href = '/employee';
         } catch (error) {
             console.error(error);
         }
@@ -69,7 +74,7 @@ const Login: React.FC = () => {
                                     <span className="input-group-text">
                                         <a
                                             onClick={toggleShowOrHidePassword}
-                                            href="#"
+                                            href='.'
                                             className="link-secondary ps-2 pe-0"
                                             title="Show password"
                                             data-bs-toggle="tooltip"

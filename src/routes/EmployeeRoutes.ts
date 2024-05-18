@@ -1,12 +1,25 @@
-//get base url from .env file
+import { getAuthHeaders } from "../utils/headers";
+
+// Get base URL from .env file
 const baseURL = process.env.REACT_APP_BASE_URL + 'employee';
 
 const CustomerRoutes = ($api: any) => ({
-    index: (filters: any) => $api.get(`${baseURL}`, { params: filters }),
-    list: () => $api.get(`${baseURL}/list`),
-    delete: (id: number) => $api.delete(`${baseURL}/${id}`),
-    update: (id: number, data: any) => $api.put(`${baseURL}/${id}`, data),
-    create: (data: any) => $api.post(`${baseURL}`, data),
+    index: (filters: any) => $api.get(`${baseURL}`, {
+        params: filters,
+        headers: getAuthHeaders(),
+    }),
+    list: () => $api.get(`${baseURL}/list`, {
+        headers: getAuthHeaders(),
+    }),
+    delete: (id: number) => $api.delete(`${baseURL}/${id}`, {
+        headers: getAuthHeaders(),
+    }),
+    update: (id: number, data: any) => $api.put(`${baseURL}/${id}`, data, {
+        headers: getAuthHeaders(),
+    }),
+    create: (data: any) => $api.post(`${baseURL}`, data, {
+        headers: getAuthHeaders(),
+    }),
 });
 
 export default CustomerRoutes;

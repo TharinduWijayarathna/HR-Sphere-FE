@@ -9,29 +9,24 @@ interface CustomerData {
   phone: string;
 }
 
+// Create the api instance outside the component
+const api = axios.create();
+
 const Employee: React.FC = () => {
   const [customerData, setCustomerData] = useState<CustomerData | null>(null);
-
-  const api = axios.create({
-    baseURL: process.env.REACT_APP_BASE_URL,
-  });
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await CustomerRoutes(api).list();
-        setCustomerData(response.data.data);
+        setCustomerData(response.data);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error(error);
       }
     };
 
     fetchData();
-  }, [api]);
-
-  // useEffect(() => {
-  //   localStorage.setItem("token", "1234");
-  // }, []);
+  }, []);
 
   return (
     <>
@@ -52,7 +47,6 @@ const Employee: React.FC = () => {
             </p>
             <div className="empty-action">
               <a href="./." className="btn btn-primary">
-                {/* Download SVG icon from http://tabler-icons.io/i/plus */}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="icon"
