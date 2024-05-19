@@ -3,10 +3,13 @@ import axios from 'axios';
 import AuthRoutes from '../../routes/AuthRoutes';
 import './login.css';
 import { getAppURL } from '../../utils/helpers';
+import { useNavigate } from 'react-router-dom';
 
 const Login: React.FC = () => {
 
     const api = axios.create();
+
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         const email = (document.getElementById('email') as HTMLInputElement).value;
@@ -14,12 +17,12 @@ const Login: React.FC = () => {
         const subdomain = getAppURL();
 
         try {
-            const response = await AuthRoutes(api).login({ email, password, subdomain });   
+            const response = await AuthRoutes(api).login({ email, password, subdomain });
 
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('tenant', response.data.tenant);
 
-            window.location.href = '/employee';
+            navigate('/');
         } catch (error) {
             console.error(error);
         }

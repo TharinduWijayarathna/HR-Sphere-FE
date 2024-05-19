@@ -1,6 +1,5 @@
 import { getAuthHeaders } from "../utils/headers";
 
-// Get base URL from .env file
 const baseURL = process.env.REACT_APP_BASE_URL + 'employee';
 
 const CustomerRoutes = ($api: any) => ({

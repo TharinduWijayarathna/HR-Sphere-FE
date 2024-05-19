@@ -10,9 +10,7 @@ const Home: React.FC = () => {
     if (!localStorage.getItem('token')) {
       navigate('/login');
     }
-
-  }
-    , [navigate]);
+  }, [navigate]);
 
   return (
     <AppLayout>
