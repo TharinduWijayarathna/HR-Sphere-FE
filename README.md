@@ -15,29 +15,29 @@ To get started with the HRsphere React Frontend, follow these instructions:
 
 1. Clone this repository to your local machine:
 
-   \`\`\`bash
+   ```bash
    git clone <https://github.com/TharinduWijayarathna/HRSphere-Tenant.git>
-   \`\`\`
+   ```
 
 2. Navigate to the project directory:
 
-   \`\`\`bash
+   ```bash
    cd HRsphere-react-frontend
-   \`\`\`
+   ```
 
 3. Install dependencies using npm:
 
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 ### Usage
 
 1. Start the development server:
 
-   \`\`\`bash
+   ```bash
    npm start
-   \`\`\`
+   ```
 
 2. Access the application in your browser at \`http://localhost:3000\`.
 
@@ -55,9 +55,9 @@ Thank you for considering contributing to HRsphere React Frontend! To contribute
 
 Create a \`.env\` file in the root directory of the project and add the following variables:
 
-\`\`\`plaintext
+```plaintext
 REACT_APP_BASE_URL=http://localhost:8000/api/
-\`\`\`
+```
 
 ### License
 
